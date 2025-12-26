@@ -44,19 +44,19 @@ void main()
     const vec4 col0 = vec4(0.5, 0.0, 0.0, 1.0);
     const vec4 col2 = vec4(0.0, 0.5, 0.0, 1.0);
 
-    // ==================== Point Light ====================
+    // Point Light 
     vec3 lightDir = normalize(pointl.pos - pos);
     vec3 n2 = normalize(norm);
 
     vec4 r1 = col0 * max(dot(n2, lightDir), 0.0) +
                  col2 * max(dot(n2, -lightDir), 0.0);
 
-    // ==================== Directional Light ====================
+    // Directional Light 
     lightDir = normalize(dirl.direction);
     vec4 r2 = col0 * max(dot(n2, lightDir), 0.0) +
                  col2 * max(dot(n2, -lightDir), 0.0);
 
-    // ==================== Spot Light ====================
+    // Spot Light 
     lightDir = normalize(spotl.pos - pos);
     float theta = dot(lightDir, -normalize(spotl.direction));
     vec4 r3 = vec4(0.0);
