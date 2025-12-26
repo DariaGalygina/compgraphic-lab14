@@ -37,7 +37,7 @@ enum class LightingModel {
 	BIDIR
 };
 
-// Добавить глобальную переменную для текущей модели
+// Р”РѕР±Р°РІРёС‚СЊ РіР»РѕР±Р°Р»СЊРЅСѓСЋ РїРµСЂРµРјРµРЅРЅСѓСЋ РґР»СЏ С‚РµРєСѓС‰РµР№ РјРѕРґРµР»Рё
 extern LightingModel currentLightingModel;
 
 using namespace std;
@@ -92,29 +92,20 @@ struct Vertex
 	GLfloat nz;
 };
 
-// Функция для установки иконки приложения
 void SetIcon(sf::Window& wnd);
-// Функция для проверки ошибок
 void checkOpenGLerror();
 
 void ShaderLog(unsigned int shader);
-// Функция для загрузки шейдеров
 void InitShader();
 void LoadAttrib(GLuint prog, GLint& attrib, const char* attr_name);
 void LoadUniform(GLuint prog, GLint& attrib, const char* attr_name);
 void LoadTexture(GLenum tex_enum, GLuint& tex, const char* path);
-// Функция для инициализации вершинного буфера
 void InitVBO();
-// Функция для инициализации ресурсов
 void InitTextures();
 void Init();
-// Функция для отрисовки
 void Draw(sf::Window& window);
-// Функция для очистки шейдеров
 void ReleaseShader();
-// Функция для очистки вершинного буфера
 void ReleaseVBO();
-// Функция для очистки ресурсов
 void Release();
 
 int load_obj(const char* filename, vector<Vertex>& out)
