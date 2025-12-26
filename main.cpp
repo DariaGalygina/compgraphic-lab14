@@ -13,12 +13,12 @@ void Init()
 	dl.diffuse = glm::vec3(0.25f);
 	dl.specular = glm::vec3(0.25f);
 
-	sl.pos = glm::vec3(-5.0f, -8.37f, -5.0f);
+	sl.pos = glm::vec3(-8.0f, -9.37f, -8.0f);
 	sl.direction = glm::vec3(1.0f);
 	sl.ambient = glm::vec3(1.0f);
 	sl.diffuse = glm::vec3(1.0f);
 	sl.specular = glm::vec3(1.0f);
-	sl.cutoff = 12.5f;
+	sl.cutoff = 1.5f;
 	sl.atten = glm::vec3(0.1f, 0.1f, 0.1f);
 
 	mat.ambient = glm::vec3(0.5f, 0.5f, 0.5f);
@@ -37,7 +37,7 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 
-	sf::Window window(sf::VideoMode(sf::Vector2u(1000, 1000)), "Light & Magic");
+	sf::Window window(sf::VideoMode(sf::Vector2u(1000, 1000)), "Lab14");
 
 	SetIcon(window);
 	window.setVerticalSyncEnabled(true); 
